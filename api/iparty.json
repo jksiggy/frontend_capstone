@@ -22,34 +22,5 @@
       "age": 19
     }
   ],
-  "parties": [
-    {
-      "id": 2,
-      "name": "CENTER-AL - CYNODON DACTYLON POLLEN",
-      "location": "05454 Schiller Trail",
-      "date": "6/5/2019",
-      "userId": 2
-    },
-    {
-      "id": 3,
-      "name": "Buprenorphine Hydrochloride",
-      "location": "000 Browning Lane",
-      "date": "12/27/2018",
-      "userId": 3
-    },
-    {
-      "id": 4,
-      "name": "Fissure Control",
-      "location": "97763 Merrick Road",
-      "date": "3/29/2019",
-      "userId": 1
-    },
-    {
-      "id": 5,
-      "name": "HYDROCODONE BITARTRATE AND IBUPROFEN",
-      "location": "93102 Lunder Way",
-      "date": "1/7/2019",
-      "userId": 2
-    }
-  ]
+  "parties": []
 }
