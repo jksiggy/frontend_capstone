@@ -22,7 +22,7 @@
             "age": 19
         }
     ],
-    "allParty": [
+    "parties": [
         {
             "id": 1,
             "name": "Metoprolol Tartrate",
