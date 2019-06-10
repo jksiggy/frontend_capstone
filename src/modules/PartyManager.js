@@ -7,7 +7,7 @@ export default {
     getAll() {
         return fetch(`${remoteURL}/parties`).then(e => e.json())
     },
-    deleteAnimal(id) {
+    deleteParty(id) {
         return fetch(`${remoteURL}/parties/${id}`, {
             method: "DELETE",
             headers: {
@@ -25,7 +25,7 @@ export default {
         }).then(data => data.json())
     },
     put(editedParty) {
-        return fetch(`${remoteURL}/animals/${editedParty.id}`, {
+        return fetch(`${remoteURL}/parties/${editedParty.id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json"

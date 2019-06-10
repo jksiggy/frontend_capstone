@@ -7,8 +7,21 @@ import PartyList from './party/PartyList'
 class ApplicationViews extends Component {
     state = {
       parties: [],
-      
-    };
+ };
+ deleteParty = (id) => {
+    const newState = {};
+    PartyManager.deleteParty(id)
+        .then(PartyManager.getAll)
+        .then(parties => {
+            console.log("parties", parties);
+            newState.parties = parties
+        })
+        .then(() => {
+           
+            this.setState(newState)
+        })
+}
+
     componentDidMount() {
         const newState = {};
     
@@ -25,6 +38,7 @@ class ApplicationViews extends Component {
                         deleteParty={this.deleteParty}
                         parties={this.state.parties} />
                 }} />
+
               </React.Fragment>
           )
       }

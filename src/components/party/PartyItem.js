@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import { Card,} from 'reactstrap';
 
 
 
@@ -12,30 +13,35 @@ class PartyItem extends Component {
     handleClick = (event) => {
         console.log("click", event, this.props.party.id);
         this.setState(
-           { saveDisabled: true },
+            { saveDisabled: true },
 
-       () => this.props.deleteParty(this.props.party.id)
+            () => this.props.deleteParty(this.props.party.id)
         )
     }
 
     render() {
         return (
-            <article>
-                <h3><q>{this.props.party.name}</q></h3>
-                
-                <button onClick={this.handleClick} disabled={this.state.saveDisabled} >Delete </button>
-                <Link className="nav-link" to={`/parties/${this.props.party.id}`}>Details</Link>
-                <button
-                    type="button"
-                    className="btn btn-success"
-                    onClick={() => {
-                        this.props.history.push(`/parties/${this.props.party.id}/edit`);
-                    }}
-                >
-                    Edit
+                    <Card>
+                        <article>
+                            <h4>{this.props.party.name}</h4>
+                            <h6>{this.props.party.location}</h6>
+                            <time>{this.props.party.date}</time>
+                            <br/>
+
+
+                            <button onClick={this.handleClick} disabled={this.state.saveDisabled} >Delete </button>
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    this.props.history.push(`/parties/${this.props.party.id}/edit`);
+                                }}
+                            >
+                                Edit
             </button>
-                <br /><hr />
-            </article>
+                            <hr />
+                        </article>
+
+                    </Card>
         )
     }
 }

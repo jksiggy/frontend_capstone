@@ -1,69 +1,55 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "email": "zkay0@macromedia.com",
-            "password": "JtvJ18v",
-            "fullname": "Zorina Kay",
-            "age": 24
-        },
-        {
-            "id": 2,
-            "email": "ejorden1@blogs.com",
-            "password": "X17A6PMS",
-            "fullname": "Evaleen Jorden",
-            "age": 21
-        },
-        {
-            "id": 3,
-            "email": "cyendall2@chron.com",
-            "password": "nWErOYP41A",
-            "fullname": "Clifford Yendall",
-            "age": 19
-        }
-    ],
-    "parties": [
-        {
-            "id": 1,
-            "name": "Metoprolol Tartrate",
-            "locatoion": "3828 Lakewood Gardens Trail",
-            "date": "11/29/2018",
-            "userId": 1
-        },
-        {
-            "id": 2,
-            "name": "CENTER-AL - CYNODON DACTYLON POLLEN",
-            "locatoion": "05454 Schiller Trail",
-            "date": "6/5/2019",
-            "userId": 2
-        },
-        {
-            "id": 3,
-            "name": "Buprenorphine Hydrochloride",
-            "locatoion": "000 Browning Lane",
-            "date": "12/27/2018",
-            "userId": 3
-        },
-        {
-            "id": 4,
-            "name": "Fissure Control",
-            "locatoion": "97763 Merrick Road",
-            "date": "3/29/2019",
-            "userId": 4
-        },
-        {
-            "id": 5,
-            "name": "HYDROCODONE BITARTRATE AND IBUPROFEN",
-            "locatoion": "93102 Lunder Way",
-            "date": "1/7/2019",
-            "userId": 5
-        },
-        {
-            "id": 6,
-            "name": "Alka Seltzer",
-            "locatoion": "5552 Sachtjen Point",
-            "date": "11/25/2018",
-            "userId": 6
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "email": "zkay0@macromedia.com",
+      "password": "JtvJ18v",
+      "fullname": "Zorina Kay",
+      "age": 24
+    },
+    {
+      "id": 2,
+      "email": "ejorden1@blogs.com",
+      "password": "X17A6PMS",
+      "fullname": "Evaleen Jorden",
+      "age": 21
+    },
+    {
+      "id": 3,
+      "email": "cyendall2@chron.com",
+      "password": "nWErOYP41A",
+      "fullname": "Clifford Yendall",
+      "age": 19
+    }
+  ],
+  "parties": [
+    {
+      "id": 2,
+      "name": "CENTER-AL - CYNODON DACTYLON POLLEN",
+      "location": "05454 Schiller Trail",
+      "date": "6/5/2019",
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "name": "Buprenorphine Hydrochloride",
+      "location": "000 Browning Lane",
+      "date": "12/27/2018",
+      "userId": 3
+    },
+    {
+      "id": 4,
+      "name": "Fissure Control",
+      "location": "97763 Merrick Road",
+      "date": "3/29/2019",
+      "userId": 1
+    },
+    {
+      "id": 5,
+      "name": "HYDROCODONE BITARTRATE AND IBUPROFEN",
+      "location": "93102 Lunder Way",
+      "date": "1/7/2019",
+      "userId": 2
+    }
+  ]
 }

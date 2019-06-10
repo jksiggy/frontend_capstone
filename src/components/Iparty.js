@@ -10,8 +10,8 @@ class Iparty extends Component {
     render() {
         return (
             <React.Fragment>
-                <ApplicationViews />
                 <NavBar />
+                <ApplicationViews />
                 
             </React.Fragment>
         )

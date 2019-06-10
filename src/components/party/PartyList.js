@@ -17,11 +17,10 @@ export default class PartyList extends Component {
                         onClick={() => {
                             this.props.history.push("/parties/new")}
                         }>
-                   New PArty
+                   New Party
                 </Button>
             </div>
             <section className="parties">
-                <h2>All Party</h2>
                 {
                     this.props.parties.map((item) => {
                         return <PartyItem key={item.id} party={item} 
