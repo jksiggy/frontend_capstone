@@ -3,19 +3,20 @@ import { Link } from "react-router-dom"
 
 
 
+
 class NavBar extends Component {
     render() {
         return (
             <nav className="navbar navbar-light light-blue flex-md-nowrap p-0 shadow">
                 <ol className="nav nav-pills">
                     <li className="nav-item">
-                        <Link className="nav-link" to="/">Home</Link>
+                        <Link className="nav-link" to="/home">Home</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/parties">Party</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/parties">Favorite</Link>
+                        <Link className="nav-link" to="/favorites">Favorite</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/">Logout</Link>

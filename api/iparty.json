@@ -1,26 +1,48 @@
 {
   "users": [
     {
-      "id": 1,
-      "email": "zkay0@macromedia.com",
-      "password": "JtvJ18v",
-      "fullname": "Zorina Kay",
-      "age": 24
+      "email": "hello@world.com",
+      "password": "hello",
+      "id": 7
     },
     {
-      "id": 2,
-      "email": "ejorden1@blogs.com",
-      "password": "X17A6PMS",
-      "fullname": "Evaleen Jorden",
-      "age": 21
+      "email": "",
+      "password": "",
+      "id": 8
     },
     {
-      "id": 3,
-      "email": "cyendall2@chron.com",
-      "password": "nWErOYP41A",
-      "fullname": "Clifford Yendall",
-      "age": 19
+      "email": "nss@mail.com",
+      "password": "nss",
+      "id": 9
+    },
+    {
+      "email": "jksiggy",
+      "password": "jjjj",
+      "id": 10
+    },
+    {
+      "email": "nss",
+      "password": "",
+      "id": 11
+    },
+    {
+      "email": "l",
+      "password": "",
+      "id": 12
     }
   ],
-  "parties": []
+  "parties": [
+    {
+      "id": 1,
+      "name": "nss",
+      "location": "nashville",
+      "date": "2019-06-11"
+    },
+    {
+      "name": "hello",
+      "location": "nss",
+      "date": "2019-06-20",
+      "id": 2
+    }
+  ]
 }
