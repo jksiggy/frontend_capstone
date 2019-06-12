@@ -7,6 +7,7 @@ export default class PartyForm extends Component {
         partyName: "",
         location: "",
         date: "",
+        
     };
 
     // Update state whenever an input field is edited
@@ -23,12 +24,14 @@ export default class PartyForm extends Component {
     constructNewParty = evt => {
         evt.preventDefault();
 
-
-
+        let userId = sessionStorage.getItem('User')
+        let firstname = sessionStorage.getItem('firstName')
         const party = {
             name: this.state.partyName,
             location: this.state.location,
-            date: this.state.date
+            date: this.state.date,
+            firstname: firstname,
+            userId:parseInt(userId)
 
         };
 

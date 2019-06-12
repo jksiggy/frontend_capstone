@@ -35,6 +35,7 @@ class Login extends Component {
             }
             if (loggedIn === true) {
               sessionStorage.setItem("User", user.id);
+              sessionStorage.setItem("firstName", user.firstName);
               this.props.populateAppState();
               this.props.history.push("/home");
             }

@@ -18,17 +18,21 @@ export default class PartyEdit extends Component {
 
     updateExistingParty = evt => {
         evt.preventDefault()
-        {
+        
+        let userId = sessionStorage.getItem('User')
+        let firstname = sessionStorage.getItem('firstName')
             const editedParty = {
                 id: this.props.match.params.partyId,
                 name: this.state.partyName,
                 location: this.state.location,
-                date: this.state.date
+                date: this.state.date,
+                firstname: firstname,
+                userId:parseInt(userId)
             };
 
             this.props.updateParty(editedParty)
                 .then(() => this.props.history.push("/parties"))
-        }
+        
     }
 
     componentDidMount() {

@@ -22,8 +22,8 @@ class Iparty extends Component {
     componentDidMount() {
         this.populateAppState();
     }
-    registerIt = (username, password) => {
-        return JsonManager.registerIt(username, password);
+    registerIt = (username, password, firstName) => {
+        return JsonManager.registerIt(username, password, firstName);
     };
 
     getAllUsers = () => {

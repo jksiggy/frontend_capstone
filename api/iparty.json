@@ -1,25 +1,36 @@
 {
   "users": [
     {
-      "email": "nss@mail.com",
-      "password": "nss",
-      "id": 10
-    },
-    {
-      "email": "robby@mail.com",
-      "password": "robby",
-      "id": 11
-    },
-    {
       "email": "hello@world.com",
       "password": "hello",
-      "id": 12
-    },
-    {
-      "email": "my@mail.com",
-      "password": "my",
-      "id": 13
+      "firstName": "Robby",
+      "id": 1
     }
   ],
-  "parties": []
+  "parties": [
+    {
+      "id": 1,
+      "name": "nss",
+      "location": "NSSSS",
+      "date": "2019-06-19",
+      "firstname": "Robby",
+      "userId": 1
+    },
+    {
+      "name": "fasf",
+      "location": "asdfadf",
+      "date": "2222-02-05",
+      "firstname": "Robby",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "name": "nss",
+      "location": "fd",
+      "date": "2019-06-04",
+      "firstname": "Robby",
+      "userId": 1,
+      "id": 3
+    }
+  ]
 }
