@@ -22,19 +22,21 @@ export default class PartyForm extends Component {
        */
     constructNewParty = evt => {
         evt.preventDefault();
-        {
-            const party = {
-                name: this.state.partyName,
-                location: this.state.location,
-                date: this.state.date
 
-            };
 
-            // Create the party and redirect user to party list
-            this.props
-                .addParty(party)
-                .then(() => this.props.history.push("/parties"));
-        }
+
+        const party = {
+            name: this.state.partyName,
+            location: this.state.location,
+            date: this.state.date
+
+        };
+
+        // Create the party and redirect user to party list
+        this.props
+            .addParty(party)
+            .then(() => this.props.history.push("/parties"));
+
     };
 
     render() {

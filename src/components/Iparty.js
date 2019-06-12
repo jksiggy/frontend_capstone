@@ -46,9 +46,8 @@ class Iparty extends Component {
             );
         }
     };
-    logOut() {
-        this.setState({loggedIn: false}); 
-    }
+  
+    
 
     render() {
         return (

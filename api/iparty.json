@@ -1,11 +1,6 @@
 {
   "users": [
     {
-      "email": "hello@world.com",
-      "password": "hello",
-      "id": 9
-    },
-    {
       "email": "nss@mail.com",
       "password": "nss",
       "id": 10
@@ -14,6 +9,16 @@
       "email": "robby@mail.com",
       "password": "robby",
       "id": 11
+    },
+    {
+      "email": "hello@world.com",
+      "password": "hello",
+      "id": 12
+    },
+    {
+      "email": "my@mail.com",
+      "password": "my",
+      "id": 13
     }
   ],
   "parties": []

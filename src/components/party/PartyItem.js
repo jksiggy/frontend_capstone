@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { Card,} from 'reactstrap';
+import { Card, } from 'reactstrap';
 
 
 
@@ -21,27 +21,27 @@ class PartyItem extends Component {
 
     render() {
         return (
-                    <Card>
-                        <article>
-                            <h4>{this.props.party.name}</h4>
-                            <h6>{this.props.party.location}</h6>
-                            <time>{this.props.party.date}</time>
-                            <br/>
+            <Card>
+                <article>
+                    <h4>{this.props.party.name}</h4>
+                    <h6>{this.props.party.location}</h6>
+                    <time>{this.props.party.date}</time>
+                    <br />
 
 
-                            <button onClick={this.handleClick} disabled={this.state.saveDisabled} >Delete </button>
-                            <button
-                                type="button"
-                                onClick={() => {
-                                    this.props.history.push(`/parties/${this.props.party.id}/edit`);
-                                }}
-                            >
-                                Edit
+                    <button onClick={this.handleClick} disabled={this.state.saveDisabled} >Delete </button>
+                    <button
+                        type="button"
+                        onClick={() => {
+                            this.props.history.push(`/parties/${this.props.party.id}/edit`);
+                        }}
+                    >
+                        Edit
             </button>
-                            <hr />
-                        </article>
+                    <hr />
+                </article>
 
-                    </Card>
+            </Card>
         )
     }
 }
