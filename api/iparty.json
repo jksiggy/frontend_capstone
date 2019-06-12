@@ -3,46 +3,18 @@
     {
       "email": "hello@world.com",
       "password": "hello",
-      "id": 7
-    },
-    {
-      "email": "",
-      "password": "",
-      "id": 8
+      "id": 9
     },
     {
       "email": "nss@mail.com",
       "password": "nss",
-      "id": 9
-    },
-    {
-      "email": "jksiggy",
-      "password": "jjjj",
       "id": 10
     },
     {
-      "email": "nss",
-      "password": "",
+      "email": "robby@mail.com",
+      "password": "robby",
       "id": 11
-    },
-    {
-      "email": "l",
-      "password": "",
-      "id": 12
     }
   ],
-  "parties": [
-    {
-      "id": 1,
-      "name": "nss",
-      "location": "nashville",
-      "date": "2019-06-11"
-    },
-    {
-      "name": "hello",
-      "location": "nss",
-      "date": "2019-06-20",
-      "id": 2
-    }
-  ]
+  "parties": []
 }

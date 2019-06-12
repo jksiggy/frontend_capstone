@@ -11,6 +11,7 @@ export default class Register extends Component {
         password: ""
     }
 
+
     handleFieldChange = evt => {
         const stateToChange = {};
         stateToChange[evt.target.id] = evt.target.value
@@ -24,11 +25,11 @@ export default class Register extends Component {
                 let usersArray = allUsers.filter(user => {
                     return (user.email === this.state.email)
                 })
+                
                 if (usersArray.length > 0) {
-                    alert("email is not avaliable")
+                    alert("Please use different email")
                 }
                 else {
-                    alert("Registered!")
                     const newUser = {
                         email: this.state.email,
                         password: this.state.password
@@ -48,8 +49,10 @@ export default class Register extends Component {
                     <FormGroup>
                         <Label>Email:</Label>
                         <Input
-                        type="email" required onChange={this.handleFieldChange}
+                        type="email" 
+                        required onChange={this.handleFieldChange}
                         name="email"
+                        value={this.state.email}
                         id="email"
                         placeholder="myemail@email.com"
                         />
@@ -59,7 +62,9 @@ export default class Register extends Component {
                     <FormGroup>
                         <Label>Password:</Label>
                         <Input 
-                        type="password" required onChange={this.handleFieldChange} 
+                        type="password" 
+                        required onChange={this.handleFieldChange} 
+                        value={this.state.password}
                         name="password"
                         id="password"
                         placeholder="********"
@@ -67,10 +72,10 @@ export default class Register extends Component {
                     </FormGroup>
                     </Col>
                     <Button 
-                    type="submit"
+                    type="button"
+                    disabled={!this.state.email || !this.state.password}
                     color="primary"
-
-                     className="" onClick={this.getAllUsers}> Register </Button>
+                     onClick={this.getAllUsers}> Register </Button>
                     </Form>
             </Container>
         )

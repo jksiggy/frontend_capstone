@@ -12,6 +12,7 @@ import Login from "../users/Login";
 
 
 
+
 class ApplicationViews extends Component {
     state = {
         parties: [],

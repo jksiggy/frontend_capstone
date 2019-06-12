@@ -35,7 +35,6 @@ class Iparty extends Component {
             .then(() => this.populateAppState())
             .then(() => this.registerIt(user.username, user.password));
 
-    //This is in progress, may not function now
     isAuthenticated = () => sessionStorage.getItem("User") !== null;
 
     //Function to hide the navbar and show it after login
@@ -47,6 +46,9 @@ class Iparty extends Component {
             );
         }
     };
+    logOut() {
+        this.setState({loggedIn: false}); 
+    }
 
     render() {
         return (

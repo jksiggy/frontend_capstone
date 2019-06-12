@@ -81,19 +81,19 @@ class Login extends Component {
                 id="password"
                 placeholder="********"
               />
-              </FormGroup>
-              </Col> 
-            <Button className="" type="submit" onClick={this.onLogin}>
-              Sign In
+            </FormGroup>
+          </Col>
+          <Button className="" type="submit" onClick={this.onLogin}>
+            Sign In
                 </Button>
-                <br/>
-              Not a User? <Link to="/register">Sign Up</Link>
-                </Form>
+          <br />
+          Not a User? <Link to="/register">Sign Up</Link>
+        </Form>
       </Container>
-        );
-      }
-    }
-    
-    
-      
+    );
+  }
+}
+
+
+
 export default Login;
