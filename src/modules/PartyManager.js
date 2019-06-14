@@ -1,6 +1,6 @@
 const remoteURL = "http://localhost:5002"
 
-// const activeUser =
+
 
 
 export default {
@@ -19,7 +19,7 @@ export default {
         })
     },
     post(newParty) {
-        return fetch(`${remoteURL}/parties`, {
+        return fetch(`${remoteURL}/parties/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

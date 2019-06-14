@@ -7,6 +7,8 @@ import PartyAddForm from './party/PartyAddForm';
 import PartyEdit from './party/PartyEdit'
 import Register from "../users/Register";
 import Login from "../users/Login";
+import FavoriteManager from "../modules/FavoriteManager"
+import FavoriteList from "./favorite/FavoriteList"
 
 
 
@@ -16,6 +18,7 @@ import Login from "../users/Login";
 class ApplicationViews extends Component {
     state = {
         parties: [],
+        favorites: []
     };
     deleteParty = (id) => {
         const newState = {};
@@ -50,20 +53,45 @@ class ApplicationViews extends Component {
             });
     };
 
+    addFavorite = favorite =>
+        FavoriteManager.post(favorite)
+            .then(() => FavoriteManager.getAllFavorite())
+            .then(favorites =>
+                this.setState({
+                    favorites: favorites
+                })
+            );
+
+    ShowFavorite = favorites =>
+        FavoriteManager.getAllFavorite(favorites)
+            .then(favorites =>
+                this.setState({
+                    favorites: favorites
+                }));
+
     componentDidMount() {
         const newState = {};
 
         PartyManager.getAll()
             .then((parties) => (newState.parties = parties))
+            .then(FavoriteManager.getAllFavorite)
+            .then((favorites) => (newState.favorites = favorites))
             .then(() => this.setState(newState));
+
+        
     }
 
+
+
+
     render() {
+        
         return (
             <React.Fragment>
                 <Route exact path="/parties" render={(props) => {
                     return <PartyList  {...props}
                         deleteParty={this.deleteParty}
+                        addFavorite={this.addFavorite}
                         parties={this.state.parties} />
                 }} />
                 <Route path="/parties/new" render={(props) => {
@@ -101,6 +129,12 @@ class ApplicationViews extends Component {
                         );
                     }}
                 />
+                <Route exact path="/favorites" render={(props) => {
+                    return <FavoriteList  {...props}
+                        deleteFavorite={this.deleteFavorite}
+                        favorites={this.state.favorites} />
+                }} />
+
 
             </React.Fragment>
         )

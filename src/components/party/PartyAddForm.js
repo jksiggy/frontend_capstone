@@ -32,8 +32,7 @@ export default class PartyForm extends Component {
             date: this.state.date,
             fullname: fullname,
             userId:parseInt(userId)
-
-        };
+         };
 
         // Create the party and redirect user to party list
         this.props

@@ -25,7 +25,8 @@ export default class PartyList extends Component {
                     this.props.parties.map((item) => {
                         return <PartyItem key={item.id} party={item} 
                         {...this.props}
-                            deleteParty={this.props.deleteParty} />
+                            deleteParty={this.props.deleteParty}
+                            addFavorite={this.props.addFavorite} />
                     })
                 }
             </section>

@@ -1,26 +1,55 @@
 {
   "users": [
     {
-      "email": "bryan@mail.com",
-      "password": "bryan",
-      "fullname": "Bryan Nilsen",
+      "email": "robby@mail.com",
+      "password": "robby",
+      "fullname": "Robby Hetch",
       "id": 1
     },
     {
-      "email": "robby@mail.com",
-      "password": "robby",
-      "fullname": "Robby Rob",
+      "email": "bryan@mail.com",
+      "password": "bryan",
+      "fullname": "Bryan Nelsin",
       "id": 2
     }
   ],
   "parties": [
     {
-      "name": "Bryan Party",
-      "location": "NSS",
-      "date": "2018-05-12",
-      "fullname": "Bryan Nilsen",
-      "userId": 1,
-      "id": 1
+      "id": 1,
+      "name": "Robby Birthday",
+      "location": "Boston ",
+      "date": "2019-06-14",
+      "fullname": "Robby Hetch",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "name": "NSS Party",
+      "location": "NSS Nashville TN",
+      "date": "2019-06-21",
+      "fullname": "Robby Hetch",
+      "userId": 1
+    },
+    {
+      "name": "Bryan's Graduate",
+      "location": "London",
+      "date": "2019-06-14",
+      "fullname": "Bryan Nelsin",
+      "userId": 2,
+      "id": 3
     }
+  ],
+  "favorites": [
+    {
+      "partyId": 1,
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "partyId": 3,
+      "userId": 2,
+      "id": 2
+    },
+   
   ]
 }

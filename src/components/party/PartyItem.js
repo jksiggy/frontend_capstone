@@ -6,6 +6,7 @@ import { Card, } from 'reactstrap';
 class PartyItem extends Component {
 
     state = {
+       
         saveDisabled: false
     }
 
@@ -17,8 +18,24 @@ class PartyItem extends Component {
             () => this.props.deleteParty(this.props.party.id)
         )
     }
+    constructNewFavorite = evt => {
+        evt.preventDefault()
+        console.log(evt.target.id);
 
+        let userId = sessionStorage.getItem('User');
+        const favorite = {
+            partyId:parseInt(evt.target.id),
+            userId:parseInt(userId)
+            
+           
+         };
 
+        // Create the p and redirect user to party list
+        this.props
+            .addFavorite(favorite)
+           
+
+    };
 
     render() {
         const currentUser = sessionStorage.getItem('User')
@@ -48,15 +65,19 @@ class PartyItem extends Component {
                                 Edit
                              </button>
 
-                             <button onClick={this.handleClick} disabled={this.state.saveDisabled} >Favorite </button>
+                             <button
+                            type="submit" 
+                            id={this.props.party.id}  onClick={this.constructNewFavorite} disabled={this.state.saveDisabled} >Favorite </button>
+
+                            
                         </>
                         
                         ) : (
 
-                            <button onClick={this.handleClick} disabled={this.state.saveDisabled} >Favorite </button>
-
-                        
-                               
+                            <button
+                            type="submit"
+                            id={this.props.party.id}  onClick={this.constructNewFavorite} disabled={this.state.saveDisabled} >Favorite </button>
+                    
 
                                 )}
 
