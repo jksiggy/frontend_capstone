@@ -9,7 +9,7 @@ export default class Register extends Component {
     state = {
         email: "",
         password: "",
-        firstName: ""
+        fullname: ""
     }
 
 
@@ -34,7 +34,7 @@ export default class Register extends Component {
                     const newUser = {
                         email: this.state.email,
                         password: this.state.password,
-                        firstName: this.state.firstName
+                        fullname: this.state.fullname
                     }
                     this.props.addUser(newUser)
                     this.props.history.push("/")
@@ -75,20 +75,20 @@ export default class Register extends Component {
                     </Col>
                     <Col>
                     <FormGroup>
-                        <Label>FirstName:</Label>
+                        <Label>FullName:</Label>
                         <Input 
                         type="text" 
                         required onChange={this.handleFieldChange} 
-                        value={this.state.firstName}
-                        name="firstName"
-                        id="firstName"
-                        placeholder="First Name"
+                        value={this.state.fullname}
+                        name="fullname"
+                        id="fullname"
+                        placeholder="ex: Bryan Nilsen"
                           />
                     </FormGroup>
                     </Col>
                     <Button 
                     type="button"
-                    disabled={!this.state.email || !this.state.password || !this.state.firstName}
+                    disabled={!this.state.email || !this.state.password || !this.state.fullname}
                     color="primary"
                      onClick={this.getAllUsers}> Register </Button>
                     </Form>

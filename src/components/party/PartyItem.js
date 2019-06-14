@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import { Card, } from 'reactstrap';
 
 
@@ -19,26 +18,56 @@ class PartyItem extends Component {
         )
     }
 
+
+
     render() {
+        const currentUser = sessionStorage.getItem('User')
+
         return (
             <Card>
                 <article>
-                    <h4>{this.props.party.name}</h4>
-                    <h6>{this.props.party.location}</h6>
+                    <h3>{this.props.party.name}</h3>
+                    <h4>{this.props.party.location}</h4>
                     <time>{this.props.party.date}</time>
+                    <br/>
+                    <br/>
+                    <h6>Created By: {this.props.party.fullname}</h6>
+
                     <br />
 
-
-                    <button onClick={this.handleClick} disabled={this.state.saveDisabled} >Delete </button>
-                    <button
+                    {currentUser == (this.props.party.userId)  ?  (
+                        <>
+                        <button onClick={this.handleClick} disabled={this.state.saveDisabled} >Delete </button>
+                    
+                        <button
                         type="button"
                         onClick={() => {
                             this.props.history.push(`/parties/${this.props.party.id}/edit`);
                         }}
-                    >
-                        Edit
-            </button>
-                    <hr />
+                        >
+                                Edit
+                             </button>
+
+                             <button onClick={this.handleClick} disabled={this.state.saveDisabled} >Favorite </button>
+                        </>
+                        
+                        ) : (
+
+                            <button onClick={this.handleClick} disabled={this.state.saveDisabled} >Favorite </button>
+
+                        
+                               
+
+                                )}
+
+                            
+
+
+                        
+
+
+
+                    
                 </article>
 
             </Card>

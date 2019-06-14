@@ -1,36 +1,26 @@
 {
   "users": [
     {
-      "email": "hello@world.com",
-      "password": "hello",
-      "firstName": "Robby",
+      "email": "bryan@mail.com",
+      "password": "bryan",
+      "fullname": "Bryan Nilsen",
       "id": 1
+    },
+    {
+      "email": "robby@mail.com",
+      "password": "robby",
+      "fullname": "Robby Rob",
+      "id": 2
     }
   ],
   "parties": [
     {
-      "id": 1,
-      "name": "nss",
-      "location": "NSSSS",
-      "date": "2019-06-19",
-      "firstname": "Robby",
-      "userId": 1
-    },
-    {
-      "name": "fasf",
-      "location": "asdfadf",
-      "date": "2222-02-05",
-      "firstname": "Robby",
+      "name": "Bryan Party",
+      "location": "NSS",
+      "date": "2018-05-12",
+      "fullname": "Bryan Nilsen",
       "userId": 1,
-      "id": 2
-    },
-    {
-      "name": "nss",
-      "location": "fd",
-      "date": "2019-06-04",
-      "firstname": "Robby",
-      "userId": 1,
-      "id": 3
+      "id": 1
     }
   ]
 }

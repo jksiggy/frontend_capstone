@@ -11,8 +11,11 @@ class NavBar extends Component {
         window.location.href = '/';
     }
 
-
+    
+    
     render() {
+       
+
         return (
             <nav className="navbar navbar-light light-blue flex-md-nowrap p-0 shadow">
                 <ol className="nav nav-pills">
@@ -27,8 +30,7 @@ class NavBar extends Component {
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link"  onClick={this.logout} >Logout</Link>
-                        
-                    </li>
+                   </li>
                 </ol>
             </nav>
         )

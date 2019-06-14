@@ -25,12 +25,12 @@ export default class PartyForm extends Component {
         evt.preventDefault();
 
         let userId = sessionStorage.getItem('User')
-        let firstname = sessionStorage.getItem('firstName')
+        let fullname = sessionStorage.getItem('Fullname')
         const party = {
             name: this.state.partyName,
             location: this.state.location,
             date: this.state.date,
-            firstname: firstname,
+            fullname: fullname,
             userId:parseInt(userId)
 
         };

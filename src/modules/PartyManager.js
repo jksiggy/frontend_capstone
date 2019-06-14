@@ -1,5 +1,8 @@
 const remoteURL = "http://localhost:5002"
 
+// const activeUser =
+
+
 export default {
     get(id) {
         return fetch(`${remoteURL}/parties/${id}`).then(e => e.json())

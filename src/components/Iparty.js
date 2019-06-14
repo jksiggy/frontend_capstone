@@ -27,7 +27,7 @@ class Iparty extends Component {
     };
 
     getAllUsers = () => {
-        return JsonManager.getAll("users", "");
+        return JsonManager.getAll("users");
     };
 
     addUser = (user) =>
