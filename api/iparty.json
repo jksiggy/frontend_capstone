@@ -46,10 +46,9 @@
       "id": 1
     },
     {
-      "partyId": 3,
+      "partyId": 1,
       "userId": 2,
       "id": 2
-    },
-   
+    }
   ]
 }

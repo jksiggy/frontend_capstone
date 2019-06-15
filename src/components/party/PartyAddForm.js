@@ -7,7 +7,7 @@ export default class PartyForm extends Component {
         partyName: "",
         location: "",
         date: "",
-        
+
     };
 
     // Update state whenever an input field is edited
@@ -31,8 +31,8 @@ export default class PartyForm extends Component {
             location: this.state.location,
             date: this.state.date,
             fullname: fullname,
-            userId:parseInt(userId)
-         };
+            userId: parseInt(userId)
+        };
 
         // Create the party and redirect user to party list
         this.props

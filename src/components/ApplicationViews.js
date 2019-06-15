@@ -62,12 +62,29 @@ class ApplicationViews extends Component {
                 })
             );
 
+
+
     ShowFavorite = favorites =>
         FavoriteManager.getAllFavorite(favorites)
             .then(favorites =>
                 this.setState({
                     favorites: favorites
                 }));
+    deleteParty = (id) => {
+        const newState = {};
+        PartyManager.deleteParty(id)
+            .then(PartyManager.getAll)
+            .then(parties => {
+                console.log("parties", parties);
+                newState.parties = parties
+            })
+            .then(() => {
+
+                this.setState(newState)
+            })
+    }
+
+
 
     componentDidMount() {
         const newState = {};
@@ -78,14 +95,14 @@ class ApplicationViews extends Component {
             .then((favorites) => (newState.favorites = favorites))
             .then(() => this.setState(newState));
 
-        
+
     }
 
 
 
 
     render() {
-        
+
         return (
             <React.Fragment>
                 <Route exact path="/parties" render={(props) => {

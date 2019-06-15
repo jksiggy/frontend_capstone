@@ -9,7 +9,7 @@ export default {
     },
     getAllFavorite() {
         return fetch(`${remoteURL}/favorites?_expand=party`).then(e => e.json())
-       
+
     },
     deleteFavorite(id) {
         return fetch(`${remoteURL}/favorites/${id}`, {
@@ -28,5 +28,5 @@ export default {
             body: JSON.stringify(newFavorite)
         }).then(data => data.json())
     },
-  
+
 }

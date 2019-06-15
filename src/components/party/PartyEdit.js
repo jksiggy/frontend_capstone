@@ -9,7 +9,6 @@ export default class PartyEdit extends Component {
         date: ""
     }
 
-
     handleFieldChange = evt => {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
@@ -18,21 +17,21 @@ export default class PartyEdit extends Component {
 
     updateExistingParty = evt => {
         evt.preventDefault()
-        
+
         let userId = sessionStorage.getItem('User')
         let fullname = sessionStorage.getItem('Fullname')
-            const editedParty = {
-                id: this.props.match.params.partyId,
-                name: this.state.partyName,
-                location: this.state.location,
-                date: this.state.date,
-                fullname: fullname,
-                userId:parseInt(userId)
-            };
+        const editedParty = {
+            id: this.props.match.params.partyId,
+            name: this.state.partyName,
+            location: this.state.location,
+            date: this.state.date,
+            fullname: fullname,
+            userId: parseInt(userId)
+        };
 
-            this.props.updateParty(editedParty)
-                .then(() => this.props.history.push("/parties"))
-        
+        this.props.updateParty(editedParty)
+            .then(() => this.props.history.push("/parties"))
+
     }
 
     componentDidMount() {
@@ -50,6 +49,7 @@ export default class PartyEdit extends Component {
     render() {
         return (
             <React.Fragment>
+
                 <form className="partyForm">
                     <div className="form-group">
                         <label htmlFor="partyName">Party Name</label>
@@ -62,6 +62,7 @@ export default class PartyEdit extends Component {
                             value={this.state.partyName}
                         />
                     </div>
+
                     <div className="form-group">
                         <label htmlFor="location">Location</label>
                         <input
@@ -73,6 +74,7 @@ export default class PartyEdit extends Component {
                             value={this.state.location}
                         />
                     </div>
+
                     <div className="form-group">
                         <label htmlFor="date">Date</label>
                         <input
@@ -84,14 +86,14 @@ export default class PartyEdit extends Component {
                             value={this.state.date}
                         />
                     </div>
-                    
+
                     <button
                         type="submit"
                         onClick={this.updateExistingParty}
                         className="btn btn-primary"
                     >
                         Submit
-            </button>
+                    </button>
                 </form>
             </React.Fragment>
         );

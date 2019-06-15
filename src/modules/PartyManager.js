@@ -29,11 +29,11 @@ export default {
     },
     put(editedParty) {
         return fetch(`${remoteURL}/parties/${editedParty.id}`, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(editedParty)
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(editedParty)
         }).then(data => data.json());
-      }
+    }
 }

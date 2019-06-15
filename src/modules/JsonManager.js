@@ -2,7 +2,7 @@ const remoteURL = "http://localhost:5002";
 
 export default {
 
-  
+
   getById(id, dataset, embedItem) {
     return fetch(`${remoteURL}/${dataset}/${id}?${embedItem}`).then((r) =>
       r.json()
