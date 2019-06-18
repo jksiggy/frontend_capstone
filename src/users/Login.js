@@ -37,7 +37,7 @@ class Login extends Component {
               sessionStorage.setItem("User", user.id);
               sessionStorage.setItem("Fullname", user.fullname);
               this.props.populateAppState();
-              this.props.history.push("/home");
+              this.props.history.push("/parties");
             }
           });
         }
@@ -53,9 +53,10 @@ class Login extends Component {
   render() {
     return (
       <Container className="App">
+        
 
 
-        <h2>Welcome</h2>
+        <h2 className="Welcome">Welcome To Iparty</h2>
 
         <Form className="form">
           <Col>

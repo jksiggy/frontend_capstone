@@ -6,7 +6,6 @@ import { Card, } from 'reactstrap';
 class FavoriteItem extends Component {
 
     render() {
-        console.log(this.props.favorite)
         return (
             <Card>
                 <article>

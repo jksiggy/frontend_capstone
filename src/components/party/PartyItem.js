@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Card, } from 'reactstrap';
+import FavoriteManager from '../../modules/FavoriteManager';
 
 
 
@@ -7,7 +8,7 @@ class PartyItem extends Component {
 
     state = {
         saveDisabled: false,
-        toggleDisabled: false
+        isDisabled: false
     }
 
     handleClick = (event) => {
@@ -17,30 +18,49 @@ class PartyItem extends Component {
             () => this.props.deleteParty(this.props.party.id)
         )
     }
-    constructNewFavorite = evt => {
-    
-        if (this.state.disabled) {
-            return;
-        }
-        this.setState({disabled: true});
 
+    
+    buttonSet = evt => {
+        evt.preventDefault();
+        FavoriteManager.favoriteByUser()
+        .then(favoriteParties => {
+            console.log("favoriteParties", favoriteParties)
+            let newFavoriteArray = favoriteParties.find(favoriteParty => {
+                console.log("PartyId", favoriteParty)
+                console.log("propsPartiesId", this.props.party.id)
+                return (favoriteParty.partyId === this.props.party.id)
+                
+            })
+            console.log("newFavoriteArray", newFavoriteArray)
+            
+            if (newFavoriteArray === null) 
+            
+            return
+            this.setState({ isDisabled: true });
+        }
+        )
         let userId = sessionStorage.getItem('User');
         const favorite = {
             partyId: parseInt(evt.target.id),
-            userId: parseInt(userId)
-        };
-
-        // Create the party//
-        this.props
+                userId: parseInt(userId)
+            }
+            //Create the favorite arry//
+            this.props
             .addFavorite(favorite)
+        }
 
-    };
 
-    render() {
+        render() {
         const currentUser = sessionStorage.getItem('User')
-
+        
+        // let favoriteArray = FavoriteManager.favoriteByUser()
+        
+        // const buttonToggle = favoriteArray.find(favorite => favorite.partyId === (this.props.party.id))
+        // console.log("favorite", favoriteArray);
+        // console.log("buttonToggle", buttonToggle)
+        
         return (
-            <Card>
+            <Card className="PartyItem">
                 <article>
                     <h5>{this.props.party.name}</h5>
                     <h6>{this.props.party.location}</h6>
@@ -66,22 +86,22 @@ class PartyItem extends Component {
                             <button
                                 type="submit"
                                 id={this.props.party.id}
-                                onClick={this.constructNewFavorite}
-                                disabled={this.state.disabled} 
-                                    disabled={this.state.disabled}>
-                                     {this.state.disabled ? 'Added' : 'Add Favorite'}
-                                </button>
+                                onClick={this.buttonSet}
+                                disabled={this.state.isDisabled}>
+                                {this.state.isDisabled ? 'Added' : 'Add Favorite'}
+                            </button>
                         </>
 
                     ) : (
 
                             <button
                                 type="submit"
-                                id={this.props.party.id} 
-                                onClick={this.constructNewFavorite} 
-                                disabled={this.state.disabled}>
-                                     {this.state.disabled ? 'Added' : 'Add Favorite'}
-                                </button>
+                                id={this.props.party.id}
+                                onClick={this.buttonSet}
+                                disabled={this.state.isDisabled}>
+                                {this.state.isDisabled ? 'Added' : 'Add Favorite'}
+                            </button>
+
 
                         )}
                 </article>

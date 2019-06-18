@@ -62,6 +62,7 @@ class ApplicationViews extends Component {
                 })
             );
 
+        
 
 
     ShowFavorite = favorites =>
@@ -84,6 +85,7 @@ class ApplicationViews extends Component {
             })
     }
 
+   favoriteArray = FavoriteManager.favoriteByUser()
 
 
     componentDidMount() {
@@ -97,7 +99,6 @@ class ApplicationViews extends Component {
 
 
     }
-
 
 
 

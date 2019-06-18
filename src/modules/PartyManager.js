@@ -8,7 +8,11 @@ export default {
         return fetch(`${remoteURL}/parties/${id}`).then(e => e.json())
     },
     getAll() {
-        return fetch(`${remoteURL}/parties`).then(e => e.json())
+        return fetch(`${remoteURL}/parties?orderBy="date"&startAt="2019-06-18"&endAt="2020-12-12"`).then(e => {
+            const partyData = e.json()
+            console.log("partyData", partyData);
+            return partyData;
+        })
     },
     deleteParty(id) {
         return fetch(`${remoteURL}/parties/${id}`, {

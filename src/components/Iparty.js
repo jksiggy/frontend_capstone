@@ -1,7 +1,8 @@
 import React, { Component } from "react"
 import ApplicationViews from './ApplicationViews';
 import NavBar from './nav/NavBar';
-import JsonManager from '../modules/JsonManager'
+import JsonManager from '../modules/JsonManager';
+
 
 
 
@@ -53,6 +54,7 @@ class Iparty extends Component {
         return (
             <React.Fragment>
                 {this.showNav()}
+               
                 <ApplicationViews
 
                     populateAppState={this.populateAppState}
