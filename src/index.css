@@ -5,9 +5,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(./components/images/partyNight.jpg);
+ 
+ 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.App {
+ width: 30%;
+margin-top: 5.5cm;
+}
+
+.Welcome {
+  margin-top: cm;
+
+}
+
+.PartyItem {
+  background-color: rgb(248, 247, 216, 0.7)
+  
+}
+

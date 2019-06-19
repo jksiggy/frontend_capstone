@@ -1,0 +1,65 @@
+{
+  "users": [
+    {
+      "email": "bryan@mail.com",
+      "password": "bryan",
+      "fullname": "Bryan Nilsen",
+      "id": 1
+    },
+    {
+      "email": "robby@mail.com",
+      "password": "robby",
+      "fullname": "robby Htcg",
+      "id": 2
+    },
+    {
+      "email": "hello@world.com",
+      "password": "hello",
+      "fullname": "hello",
+      "id": 3
+    }
+  ],
+  "parties": [
+    {
+      "id": 2,
+      "name": "Robby Concert",
+      "location": "Nashville",
+      "date": "2019-06-25",
+      "fullname": "robby Htcg",
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "name": "nsssss",
+      "location": "fafa",
+      "date": "2019-06-11",
+      "fullname": "Bryan Nilsen",
+      "userId": 1
+    },
+    {
+      "name": "asdfasadsf",
+      "location": "asdfaf",
+      "date": "2019-06-12",
+      "fullname": "robby Htcg",
+      "userId": 2,
+      "id": 4
+    }
+  ],
+  "favorites": [
+    {
+      "partyId": 2,
+      "userId": 3,
+      "id": 1
+    },
+    {
+      "partyId": 3,
+      "userId": 3,
+      "id": 2
+    },
+    {
+      "partyId": 4,
+      "userId": 3,
+      "id": 3
+    }
+  ]
+}
