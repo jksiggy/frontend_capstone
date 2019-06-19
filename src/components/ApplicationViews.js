@@ -56,10 +56,11 @@ class ApplicationViews extends Component {
         addFavorite = favorite =>
         FavoriteManager.post(favorite)
         .then(() => FavoriteManager.getAllFavorite())
-        .then(favorites =>
+        .then(favorites =>{
+            console.log("FAVORITE ADDED", favorites)
             this.setState({
                 favorites: favorites
-            })
+            })}
             );
 
         
@@ -103,7 +104,7 @@ class ApplicationViews extends Component {
 
 
     render() {
-
+console.log("FAVORITES FROM STATE", this.state.favorites)
         return (
             <React.Fragment>
                 <Route exact path="/parties" render={(props) => {
@@ -111,6 +112,7 @@ class ApplicationViews extends Component {
                         deleteParty={this.deleteParty}
                         addFavorite={this.addFavorite}
                         parties={this.state.parties}
+                        favorites={this.state.favorites}
                      />
                 }} />
                 <Route path="/parties/new" render={(props) => {

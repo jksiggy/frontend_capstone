@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Card, } from 'reactstrap';
-import FavoriteManager from '../../modules/FavoriteManager';
+import FavoriteManager from '../../modules/FavoriteManager'
+
 
 
 
@@ -8,7 +9,8 @@ class PartyItem extends Component {
 
     state = {
         saveDisabled: false,
-        isDisabled: false
+        isDisabled: false,
+        currentUser: ""
     }
 
     handleClick = (event) => {
@@ -22,26 +24,9 @@ class PartyItem extends Component {
 
     buttonSet = evt => {
         evt.preventDefault();
-        FavoriteManager.favoriteByUser()
-            .then(favoriteParties => {
-                console.log("favoriteParties", favoriteParties)
-                let newFavoriteArray = favoriteParties.find(favoriteParty => {
-                    console.log("PartyId", favoriteParty)
-                    console.log("propsPartiesId", this.props.party.id)
-                    return (favoriteParty.partyId === this.props.party.id)
 
-                })
-                console.log("newFavoriteArray", newFavoriteArray)
+        this.setState({ isDisabled: true });
 
-
-                if (newFavoriteArray) {
-
-                    this.setState({ isDisabled: true });
-
-                }
-
-            }
-            )
         let userId = sessionStorage.getItem('User');
         const favorite = {
             partyId: parseInt(evt.target.id),
@@ -50,35 +35,31 @@ class PartyItem extends Component {
         //Create the favorite arry//
         this.props
             .addFavorite(favorite)
+            
+        }
+        
+
+        componentDidMount() {
+        const sessionUser = sessionStorage.getItem('User')
+        FavoriteManager.favoriteByUser(sessionUser, this.props.party.id).then(result => console.log("RESULT OF FECTH", result))
+        let newFavoriteArray = this.props.favorites.find(favoriteParty => {
+            return(favoriteParty.partyId === this.props.party.id)
+        })
+
+        if(newFavoriteArray){
+        
+            this.setState({isFavorite: true})
+            this.setState({isDisabled: true})
+        }
+
+
+        this.setState({currentUser: sessionStorage.getItem('User')})
     }
 
-
-    render() {
-        const currentUser = sessionStorage.getItem('User')
-        FavoriteManager.favoriteByUser()
-            .then(favoriteParties => {
-                console.log("favoriteParties", favoriteParties)
-                let newFavoriteArray = favoriteParties.find(favoriteParty => {
-                    console.log("PartyId", favoriteParty)
-                    console.log("propsPartiesId", this.props.party.id)
-                    return (favoriteParty.partyId === this.props.party.id)
-
-                })
-                console.log("newFavoriteArray", newFavoriteArray)
-
-
-                if (newFavoriteArray) {
-
-                    this.setState({ isDisabled: true });
-
-                }
-
-            })
+        
     
-        
+        render() {
 
-        
-        
         return (
             <Card className="PartyItem">
                 <article>
@@ -90,7 +71,7 @@ class PartyItem extends Component {
                     <h6>Created By: {this.props.party.fullname}</h6>
                     <br />
 
-                    {currentUser == (this.props.party.userId) ? (
+                    {this.state.currentUser == (this.props.party.userId) ? (
                         <>
                             <button onClick={this.handleClick} disabled={this.state.saveDisabled} >Delete </button>
 
@@ -124,6 +105,8 @@ class PartyItem extends Component {
 
 
                         )}
+
+                    {this.state.isFavorite === true ? ( <p>FAVORITE</p>) : ( <p>NOT FAVORITE</p>)}
                 </article>
             </Card>
         )

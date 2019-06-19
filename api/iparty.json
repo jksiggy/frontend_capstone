@@ -43,14 +43,17 @@
       "fullname": "robby Htcg",
       "userId": 2,
       "id": 4
+    },
+    {
+      "name": "adfadf",
+      "location": "afeaf",
+      "date": "2019-06-12",
+      "fullname": "hello",
+      "userId": 3,
+      "id": 5
     }
   ],
   "favorites": [
-    {
-      "partyId": 2,
-      "userId": 3,
-      "id": 1
-    },
     {
       "partyId": 3,
       "userId": 3,
@@ -60,6 +63,11 @@
       "partyId": 4,
       "userId": 3,
       "id": 3
+    },
+    {
+      "partyId": 2,
+      "userId": 3,
+      "id": 4
     }
   ]
 }
