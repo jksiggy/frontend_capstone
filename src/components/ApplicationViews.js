@@ -23,51 +23,51 @@ class ApplicationViews extends Component {
     deleteParty = (id) => {
         const newState = {};
         PartyManager.deleteParty(id)
-            .then(PartyManager.getAll)
-            .then(parties => {
-                console.log("parties", parties);
-                newState.parties = parties
-            })
-            .then(() => {
-
-                this.setState(newState)
-            })
+        .then(PartyManager.getAll)
+        .then(parties => {
+            console.log("parties", parties);
+            newState.parties = parties
+        })
+        .then(() => {
+            
+            this.setState(newState)
+        })
     }
-
+    
     addParty = party =>
-        PartyManager.post(party)
-            .then(() => PartyManager.getAll())
-            .then(parties =>
-                this.setState({
-                    parties: parties
-                })
-            );
-
-    updateParty = (editedPartyObject) => {
-        return PartyManager.put(editedPartyObject)
+    PartyManager.post(party)
+    .then(() => PartyManager.getAll())
+    .then(parties =>
+        this.setState({
+            parties: parties
+        })
+        );
+        
+        updateParty = (editedPartyObject) => {
+            return PartyManager.put(editedPartyObject)
             .then(() => PartyManager.getAll())
             .then(parties => {
                 this.setState({
                     parties: parties
                 })
             });
-    };
-
-    addFavorite = favorite =>
+        };
+        
+        addFavorite = favorite =>
         FavoriteManager.post(favorite)
-            .then(() => FavoriteManager.getAllFavorite())
-            .then(favorites =>
-                this.setState({
-                    favorites: favorites
-                })
+        .then(() => FavoriteManager.getAllFavorite())
+        .then(favorites =>
+            this.setState({
+                favorites: favorites
+            })
             );
 
         
-
+            
 
     ShowFavorite = favorites =>
-        FavoriteManager.getAllFavorite(favorites)
-            .then(favorites =>
+    FavoriteManager.getAllFavorite(favorites)
+    .then(favorites =>
                 this.setState({
                     favorites: favorites
                 }));
@@ -80,19 +80,19 @@ class ApplicationViews extends Component {
                 newState.parties = parties
             })
             .then(() => {
-
+                
                 this.setState(newState)
             })
-    }
-
-   favoriteArray = FavoriteManager.favoriteByUser()
-
+        }
+        
+        favoriteArray = FavoriteManager.favoriteByUser()
+        
 
     componentDidMount() {
         const newState = {};
 
         PartyManager.getAll()
-            .then((parties) => (newState.parties = parties))
+        .then((parties) => (newState.parties = parties))
             .then(FavoriteManager.getAllFavorite)
             .then((favorites) => (newState.favorites = favorites))
             .then(() => this.setState(newState));
@@ -110,7 +110,8 @@ class ApplicationViews extends Component {
                     return <PartyList  {...props}
                         deleteParty={this.deleteParty}
                         addFavorite={this.addFavorite}
-                        parties={this.state.parties} />
+                        parties={this.state.parties}
+                     />
                 }} />
                 <Route path="/parties/new" render={(props) => {
                     return <PartyAddForm {...props}

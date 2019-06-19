@@ -11,6 +11,12 @@
       "password": "robby",
       "fullname": "robby Htcg",
       "id": 2
+    },
+    {
+      "email": "hello@world.com",
+      "password": "hello",
+      "fullname": "hello",
+      "id": 3
     }
   ],
   "parties": [
@@ -29,33 +35,31 @@
       "date": "2019-06-11",
       "fullname": "Bryan Nilsen",
       "userId": 1
+    },
+    {
+      "name": "asdfasadsf",
+      "location": "asdfaf",
+      "date": "2019-06-12",
+      "fullname": "robby Htcg",
+      "userId": 2,
+      "id": 4
     }
   ],
   "favorites": [
     {
       "partyId": 2,
-      "userId": 1,
+      "userId": 3,
       "id": 1
     },
     {
-      "partyId": 2,
-      "userId": 1,
+      "partyId": 3,
+      "userId": 3,
       "id": 2
     },
     {
-      "partyId": 3,
-      "userId": 1,
+      "partyId": 4,
+      "userId": 3,
       "id": 3
-    },
-    {
-      "partyId": 3,
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "partyId": 2,
-      "userId": 1,
-      "id": 5
     }
   ]
 }

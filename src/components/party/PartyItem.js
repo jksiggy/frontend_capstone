@@ -19,45 +19,65 @@ class PartyItem extends Component {
         )
     }
 
-    
+
     buttonSet = evt => {
         evt.preventDefault();
         FavoriteManager.favoriteByUser()
-        .then(favoriteParties => {
-            console.log("favoriteParties", favoriteParties)
-            let newFavoriteArray = favoriteParties.find(favoriteParty => {
-                console.log("PartyId", favoriteParty)
-                console.log("propsPartiesId", this.props.party.id)
-                return (favoriteParty.partyId === this.props.party.id)
-                
-            })
-            console.log("newFavoriteArray", newFavoriteArray)
-            
-            if (newFavoriteArray === null) 
-            
-            return
-            this.setState({ isDisabled: true });
-        }
-        )
+            .then(favoriteParties => {
+                console.log("favoriteParties", favoriteParties)
+                let newFavoriteArray = favoriteParties.find(favoriteParty => {
+                    console.log("PartyId", favoriteParty)
+                    console.log("propsPartiesId", this.props.party.id)
+                    return (favoriteParty.partyId === this.props.party.id)
+
+                })
+                console.log("newFavoriteArray", newFavoriteArray)
+
+
+                if (newFavoriteArray) {
+
+                    this.setState({ isDisabled: true });
+
+                }
+
+            }
+            )
         let userId = sessionStorage.getItem('User');
         const favorite = {
             partyId: parseInt(evt.target.id),
-                userId: parseInt(userId)
-            }
-            //Create the favorite arry//
-            this.props
-            .addFavorite(favorite)
+            userId: parseInt(userId)
         }
+        //Create the favorite arry//
+        this.props
+            .addFavorite(favorite)
+    }
 
 
-        render() {
+    render() {
         const currentUser = sessionStorage.getItem('User')
+        FavoriteManager.favoriteByUser()
+            .then(favoriteParties => {
+                console.log("favoriteParties", favoriteParties)
+                let newFavoriteArray = favoriteParties.find(favoriteParty => {
+                    console.log("PartyId", favoriteParty)
+                    console.log("propsPartiesId", this.props.party.id)
+                    return (favoriteParty.partyId === this.props.party.id)
+
+                })
+                console.log("newFavoriteArray", newFavoriteArray)
+
+
+                if (newFavoriteArray) {
+
+                    this.setState({ isDisabled: true });
+
+                }
+
+            })
+    
         
-        // let favoriteArray = FavoriteManager.favoriteByUser()
+
         
-        // const buttonToggle = favoriteArray.find(favorite => favorite.partyId === (this.props.party.id))
-        // console.log("favorite", favoriteArray);
-        // console.log("buttonToggle", buttonToggle)
         
         return (
             <Card className="PartyItem">

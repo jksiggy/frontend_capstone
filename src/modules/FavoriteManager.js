@@ -3,6 +3,8 @@ const remoteURL = "http://localhost:5002"
 
 
 const activeUser = sessionStorage.getItem('User');
+
+
 export default {
     get(id) {
         return fetch(`${remoteURL}/favorites/${id}`).then(e => e.json())
