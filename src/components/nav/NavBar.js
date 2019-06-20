@@ -15,10 +15,10 @@ class IpartyNav extends Component {
             <Navbar color="light" light expand="md" na-light blue flex-md-nowrap p-0 shadow>
                <Nav tabs>
                <NavItem>
-                        <NavLink href="/parties" active>Party</NavLink>
+                        <NavLink tag={Link} to="/parties" active>Party</NavLink>
                         </NavItem>
                     <NavItem>
-                        <NavLink href="/favorites" active>Favorite</NavLink>
+                        <NavLink tag={Link}  to="/favorites" active>Favorite</NavLink>
                         </NavItem>
                     <NavItem>
                         <NavLink  onClick={this.logout} >Logout</NavLink>

@@ -1,67 +1,50 @@
 {
   "users": [
     {
-      "email": "bryan@mail.com",
-      "password": "bryan",
-      "fullname": "Bryan Nilsen",
+      "email": "robby@mail.com",
+      "password": "robby",
+      "fullname": "Robby Hecht",
       "id": 1
     },
     {
-      "email": "robby@mail.com",
-      "password": "robby",
-      "fullname": "robby Htcg",
+      "email": "bryan@mail.com",
+      "password": "bryan",
+      "fullname": "Bryan Nilsen",
       "id": 2
-    },
-    {
-      "email": "hello@world.com",
-      "password": "hello",
-      "fullname": "hello",
-      "id": 3
     }
   ],
   "parties": [
     {
       "id": 1,
-      "name": "Good",
-      "location": "Nashville TN",
-      "date": "2019-06-13",
-      "fullname": "hello",
-      "userId": 3
+      "name": "Robby Wedding",
+      "location": "500 Int. South, Nashville Tn 37015",
+      "date": "2019-06-29",
+      "fullname": "Robby Hecht",
+      "userId": 1
     },
     {
-      "name": "",
-      "location": "",
-      "date": "",
-      "fullname": "hello",
-      "userId": 3,
-      "id": 2
-    },
-    {
-      "name": "",
-      "location": "",
-      "date": "",
-      "fullname": "hello",
-      "userId": 3,
-      "id": 3
-    },
-    {
-      "id": 4,
-      "name": "asdfasadsf",
-      "location": "twywyyttty sthrrrrrrrrrrrrrrhstst tstrrrrrrrrrrrrrr",
-      "date": "2019-06-26",
-      "fullname": "hello",
-      "userId": 3
+      "id": 2,
+      "name": "Nss Gradutate",
+      "location": "7th St. Nashville TN 35225",
+      "date": "2019-06-30",
+      "fullname": "Bryan Nilsen",
+      "userId": 2
     }
   ],
   "favorites": [
     {
       "partyId": 1,
-      "userId": 3,
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "partyId": 2,
+      "userId": 2,
       "id": 3
     },
     {
-      "partyId": 4,
-      "userId": 2,
+      "partyId": 2,
+      "userId": 1,
       "id": 4
     }
   ]

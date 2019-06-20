@@ -60,7 +60,7 @@ class PartyItem extends Component {
 
         return (
             <Container>
-                 <Row>
+                 <Col>
                  <Col sm="12" md={{ size: 6, offset: 3 }}>
             <Card className="PartyItem">
                <CardBody>
@@ -95,18 +95,17 @@ class PartyItem extends Component {
 
                     ) : (
 
-                            <button
-                                type="submit"
+                            <Button color="secondary" size="small"
                                 id={this.props.party.id}
                                 onClick={this.buttonSet}
                                 disabled={this.state.isDisabled}>
                                 {this.state.isDisabled ? 'Added' : 'Add Favorite'}
-                            </button>
+                            </Button>
 
                         )}
             </Card>
             </Col>
-            </Row>
+            </Col>
             </Container>
         )
     }

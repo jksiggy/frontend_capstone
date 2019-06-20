@@ -8,7 +8,7 @@ export default {
         return fetch(`${remoteURL}/parties/${id}`).then(e => e.json())
     },
     getAll() {
-        return fetch(`${remoteURL}/parties?orderBy="date"&startAt="2019-06-18"&endAt="2020-12-12"`).then(e => {
+        return fetch(`${remoteURL}/parties?_sort=date&_order=asc`).then(e => {
             const partyData = e.json()
             console.log("partyData", partyData);
             return partyData;
