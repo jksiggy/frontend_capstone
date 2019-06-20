@@ -33,7 +33,20 @@ class ApplicationViews extends Component {
             this.setState(newState)
         })
     }
-    
+
+    deleteFavorite = (id) => {
+        const newState = {};
+        FavoriteManager.deleteFavorite(id)
+        .then(FavoriteManager.getAllFavorite)
+        .then(favorites => {
+            console.log("favorites", favorites);
+            newState.favorites = favorites
+        })
+        .then(() => {
+            
+            this.setState(newState)
+        })
+    }
     addParty = party =>
     PartyManager.post(party)
     .then(() => PartyManager.getAll())

@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom";
+import { Nav, NavItem, NavBar, NavLink,Navbar } from 'reactstrap';
 
 
-
-class NavBar extends Component {
+class IpartyNav extends Component {
 
     logout = () => {
         sessionStorage.clear();
@@ -12,21 +12,22 @@ class NavBar extends Component {
 
     render() {
         return (
-            <nav className="navbar navbar-light blue flex-md-nowrap p-0 shadow">
-                <ol className="nav nav-pills">
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/parties">Party</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/favorites">Favorite</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" onClick={this.logout} >Logout</Link>
-                    </li>
-                </ol>
-            </nav>
+            <Navbar color="light" light expand="md" na-light blue flex-md-nowrap p-0 shadow>
+               <Nav tabs>
+               <NavItem>
+                        <NavLink href="/parties" active>Party</NavLink>
+                        </NavItem>
+                    <NavItem>
+                        <NavLink href="/favorites" active>Favorite</NavLink>
+                        </NavItem>
+                    <NavItem>
+                        <NavLink  onClick={this.logout} >Logout</NavLink>
+                        </NavItem>
+               
+            </Nav>
+            </Navbar>
         )
     }
 }
 
-export default NavBar
+export default IpartyNav
