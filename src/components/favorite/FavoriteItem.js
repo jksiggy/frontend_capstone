@@ -5,6 +5,18 @@ import { Card, } from 'reactstrap';
 
 class FavoriteItem extends Component {
 
+    state = {
+        saveDisabled: false
+    }
+
+    handleClick = (event) => {
+        console.log("click", event, this.props.favorite.id);
+        this.setState(
+            { saveDisabled: true },
+            () => this.props.deleteFavorite(this.props.favorite.id)
+        )
+    }
+
     render() {
         return (
             <Card>
@@ -15,6 +27,8 @@ class FavoriteItem extends Component {
                     <br />
                     <br />
                     <h6>Created By: {this.props.favorite.party.fullname}</h6>
+
+                    <button onClick={this.handleClick} disabled={this.state.saveDisabled} >Delete </button>
 
 
 

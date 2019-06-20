@@ -17,16 +17,9 @@ export default {
        
         })
     },
-    favoriteByUser() {
-        return fetch(`${remoteURL}/favorites?_expand=party?userId=${activeUser}`)
-        .then(e => {
-            const newData = e.json()
-    console.log("newData", newData.id);
-    return newData;
-       
-        })
-       
-        
+    favoriteByUser(user, party) {
+        return fetch(`${remoteURL}/favorites?userId=${user}&partyId=${party}`)
+        .then(e => e.json())
     },
     deleteFavorite(id) {
         return fetch(`${remoteURL}/favorites/${id}`, {

@@ -14,7 +14,8 @@ export default class FavoriteList extends Component {
 
                 <section className="favorites">
                     {
-                        this.props.favorites.map((item) => {
+                         this.props.favorites.filter(favorited => favorited.userId == sessionStorage.getItem("User"))
+                        .map((item) => {
                             return <FavoriteItem key={item.id} favorite={item}
                                 {...this.props}
                                 deleteFavorite={this.props.deleteFavorite} />

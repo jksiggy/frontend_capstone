@@ -30,7 +30,8 @@ export default class PartyList extends Component {
                             return <PartyItem key={item.id} party={item}
                                 {...this.props}
                                 deleteParty={this.props.deleteParty}
-                                addFavorite={this.props.addFavorite} />
+                                addFavorite={this.props.addFavorite}
+                                favorites={this.props.favorites} />
                         })
                     }
                 </section>

@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import ApplicationViews from './ApplicationViews';
-import NavBar from './nav/NavBar';
+import IpartyNav from './nav/NavBar';
 import JsonManager from '../modules/JsonManager';
 
 
@@ -42,8 +42,7 @@ class Iparty extends Component {
     showNav = () => {
         if (this.isAuthenticated()) {
             return (
-                <NavBar
-                />
+                <IpartyNav/>
             );
         }
     };

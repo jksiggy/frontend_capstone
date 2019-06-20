@@ -21,45 +21,48 @@
   ],
   "parties": [
     {
-      "id": 2,
-      "name": "Robby Concert",
-      "location": "Nashville",
-      "date": "2019-06-25",
-      "fullname": "robby Htcg",
-      "userId": 2
+      "id": 1,
+      "name": "Good",
+      "location": "Nashville TN",
+      "date": "2019-06-13",
+      "fullname": "hello",
+      "userId": 3
     },
     {
-      "id": 3,
-      "name": "nsssss",
-      "location": "fafa",
-      "date": "2019-06-11",
-      "fullname": "Bryan Nilsen",
-      "userId": 1
-    },
-    {
-      "name": "asdfasadsf",
-      "location": "asdfaf",
-      "date": "2019-06-12",
-      "fullname": "robby Htcg",
-      "userId": 2,
-      "id": 4
-    }
-  ],
-  "favorites": [
-    {
-      "partyId": 2,
-      "userId": 3,
-      "id": 1
-    },
-    {
-      "partyId": 3,
+      "name": "",
+      "location": "",
+      "date": "",
+      "fullname": "hello",
       "userId": 3,
       "id": 2
     },
     {
-      "partyId": 4,
+      "name": "",
+      "location": "",
+      "date": "",
+      "fullname": "hello",
       "userId": 3,
       "id": 3
+    },
+    {
+      "id": 4,
+      "name": "asdfasadsf",
+      "location": "twywyyttty sthrrrrrrrrrrrrrrhstst tstrrrrrrrrrrrrrr",
+      "date": "2019-06-26",
+      "fullname": "hello",
+      "userId": 3
+    }
+  ],
+  "favorites": [
+    {
+      "partyId": 1,
+      "userId": 3,
+      "id": 3
+    },
+    {
+      "partyId": 4,
+      "userId": 2,
+      "id": 4
     }
   ]
 }

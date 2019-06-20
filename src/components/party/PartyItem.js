@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Card, } from 'reactstrap';
-import FavoriteManager from '../../modules/FavoriteManager';
+import { Card, CardTitle, CardBody, CardText, Button,Container,Row, Col, ButtonGroup} from 'reactstrap';
+
+
 
 
 
@@ -8,7 +9,8 @@ class PartyItem extends Component {
 
     state = {
         saveDisabled: false,
-        isDisabled: false
+        isDisabled: false,
+        currentUser: ""
     }
 
     handleClick = (event) => {
@@ -22,26 +24,9 @@ class PartyItem extends Component {
 
     buttonSet = evt => {
         evt.preventDefault();
-        FavoriteManager.favoriteByUser()
-            .then(favoriteParties => {
-                console.log("favoriteParties", favoriteParties)
-                let newFavoriteArray = favoriteParties.find(favoriteParty => {
-                    console.log("PartyId", favoriteParty)
-                    console.log("propsPartiesId", this.props.party.id)
-                    return (favoriteParty.partyId === this.props.party.id)
 
-                })
-                console.log("newFavoriteArray", newFavoriteArray)
+        this.setState({ isDisabled: true });
 
-
-                if (newFavoriteArray) {
-
-                    this.setState({ isDisabled: true });
-
-                }
-
-            }
-            )
         let userId = sessionStorage.getItem('User');
         const favorite = {
             partyId: parseInt(evt.target.id),
@@ -50,66 +35,62 @@ class PartyItem extends Component {
         //Create the favorite arry//
         this.props
             .addFavorite(favorite)
+
+    }
+    // this.props.favorites.filter(favorited => favorited.userId == sessionStorage.getItem("User"))
+
+    componentDidMount() {
+        let newFavoriteArray = this.props.favorites.find(favoriteParty => {
+            return (favoriteParty.partyId === this.props.party.id &&
+                favoriteParty.userId === parseInt(sessionStorage.getItem("User")))
+        })
+        console.log("newFavoriteArray", newFavoriteArray)
+        // let favoriteButton = this.props.favorites.filter(favorited => )
+        // console.log("favoriteButton", favoriteButton)
+       
+        if (newFavoriteArray) {
+            this.setState({ isDisabled: true })
+        }
+        this.setState({ currentUser: sessionStorage.getItem('User') })
     }
 
 
+
     render() {
-        const currentUser = sessionStorage.getItem('User')
-        FavoriteManager.favoriteByUser()
-            .then(favoriteParties => {
-                console.log("favoriteParties", favoriteParties)
-                let newFavoriteArray = favoriteParties.find(favoriteParty => {
-                    console.log("PartyId", favoriteParty)
-                    console.log("propsPartiesId", this.props.party.id)
-                    return (favoriteParty.partyId === this.props.party.id)
 
-                })
-                console.log("newFavoriteArray", newFavoriteArray)
-
-
-                if (newFavoriteArray) {
-
-                    this.setState({ isDisabled: true });
-
-                }
-
-            })
-    
-        
-
-        
-        
         return (
+            <Container>
+                 <Row>
+                 <Col sm="12" md={{ size: 6, offset: 3 }}>
             <Card className="PartyItem">
-                <article>
-                    <h5>{this.props.party.name}</h5>
-                    <h6>{this.props.party.location}</h6>
-                    <time>{this.props.party.date}</time>
-                    <br />
+               <CardBody>
+                <CardTitle>{this.props.party.name}</CardTitle>
+                <CardText>{this.props.party.location}</CardText>
+                    <CardText>{this.props.party.date}</CardText>
 
-                    <h6>Created By: {this.props.party.fullname}</h6>
+                    <CardText>Created By: {this.props.party.fullname}</CardText>
                     <br />
-
-                    {currentUser == (this.props.party.userId) ? (
+                    </CardBody>
+                    {this.state.currentUser == (this.props.party.userId) ? (
                         <>
-                            <button onClick={this.handleClick} disabled={this.state.saveDisabled} >Delete </button>
+                        <ButtonGroup>
+                            <Button color="danger" size="sm" onClick={this.handleClick} disabled={this.state.saveDisabled} >Delete </Button>
 
-                            <button
-                                type="button"
+                            <Button color="info" size="sm"
                                 onClick={() => {
                                     this.props.history.push(`/parties/${this.props.party.id}/edit`);
                                 }}
                             >
                                 Edit
-                             </button>
+                             </Button>
 
-                            <button
-                                type="submit"
+                            <Button color="secondary" size="small"
                                 id={this.props.party.id}
                                 onClick={this.buttonSet}
                                 disabled={this.state.isDisabled}>
-                                {this.state.isDisabled ? 'Added' : 'Add Favorite'}
-                            </button>
+                               {this.state.isDisabled ? 'Added' : 'Add Favorite'}
+                                </Button>
+                                </ButtonGroup>
                         </>
 
                     ) : (
@@ -122,10 +103,11 @@ class PartyItem extends Component {
                                 {this.state.isDisabled ? 'Added' : 'Add Favorite'}
                             </button>
 
-
                         )}
-                </article>
             </Card>
+            </Col>
+            </Row>
+            </Container>
         )
     }
 }
