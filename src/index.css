@@ -20,9 +20,17 @@ code {
 margin-top: 5.5cm;
 }
 
+.AddParty {
+  width: 30%;
+  margin-top: 5.5cm;
+}
+
 .Welcome {
   margin-top: cm;
-
+}
+.EditParty {
+  width: 30%;
+  margin-top: 5.5cm;
 }
 
 .PartyItem {

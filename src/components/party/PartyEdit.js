@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 import PartyManager from "../../modules/PartyManager"
+import { Container} from 'reactstrap';
+
 
 export default class PartyEdit extends Component {
     // Set initial state
@@ -49,7 +51,7 @@ export default class PartyEdit extends Component {
     render() {
         return (
             <React.Fragment>
-
+                 <Container className="EditParty">
                 <form className="partyForm">
                     <div className="form-group">
                         <label htmlFor="partyName">Party Name</label>
@@ -95,6 +97,7 @@ export default class PartyEdit extends Component {
                         Submit
                     </button>
                 </form>
+                </Container>
             </React.Fragment>
         );
     }

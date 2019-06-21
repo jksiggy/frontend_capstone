@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+import { Container} from 'reactstrap';
 
 
 export default class PartyForm extends Component {
     // Set initial state
     state = {
+        image:"",
         partyName: "",
         location: "",
         date: "",
@@ -27,6 +29,7 @@ export default class PartyForm extends Component {
         let userId = sessionStorage.getItem('User')
         let fullname = sessionStorage.getItem('Fullname')
         const party = {
+            img : this.state.image,
             name: this.state.partyName,
             location: this.state.location,
             date: this.state.date,
@@ -44,7 +47,10 @@ export default class PartyForm extends Component {
     render() {
         return (
             <React.Fragment>
+                <Container className="AddParty">
                 <form className="partyForm">
+                <div className="form-group">
+                    </div>
                     <div className="form-group">
                         <label htmlFor="partyName">Party Name</label>
                         <input
@@ -86,6 +92,7 @@ export default class PartyForm extends Component {
                         Submit
           </button>
                 </form>
+                </Container>
             </React.Fragment>
         );
     }

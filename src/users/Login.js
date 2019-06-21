@@ -56,7 +56,7 @@ class Login extends Component {
         
 
 
-        <h2 className="Welcome">Welcome To Iparty</h2>
+        <h2 className="Welcome">Welcome</h2>
 
         <Form className="form">
           <Col>

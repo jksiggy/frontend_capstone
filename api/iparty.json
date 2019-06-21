@@ -1,51 +1,22 @@
 {
   "users": [
     {
-      "email": "robby@mail.com",
-      "password": "robby",
-      "fullname": "Robby Hecht",
+      "email": "hello@world.com",
+      "password": "hello",
+      "fullname": "Hello World",
       "id": 1
-    },
-    {
-      "email": "bryan@mail.com",
-      "password": "bryan",
-      "fullname": "Bryan Nilsen",
-      "id": 2
     }
   ],
   "parties": [
     {
-      "id": 1,
-      "name": "Robby Wedding",
-      "location": "500 Int. South, Nashville Tn 37015",
-      "date": "2019-06-29",
-      "fullname": "Robby Hecht",
-      "userId": 1
-    },
-    {
-      "id": 2,
-      "name": "Nss Gradutate",
-      "location": "7th St. Nashville TN 35225",
-      "date": "2019-06-30",
-      "fullname": "Bryan Nilsen",
-      "userId": 2
+      "img": "",
+      "name": "",
+      "location": "",
+      "date": "",
+      "fullname": "Hello World",
+      "userId": 1,
+      "id": 1
     }
   ],
-  "favorites": [
-    {
-      "partyId": 1,
-      "userId": 2,
-      "id": 2
-    },
-    {
-      "partyId": 2,
-      "userId": 2,
-      "id": 3
-    },
-    {
-      "partyId": 2,
-      "userId": 1,
-      "id": 4
-    }
-  ]
+  "favorites": []
 }
