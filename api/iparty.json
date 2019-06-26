@@ -5,17 +5,22 @@
       "password": "hello",
       "fullname": "Hello World",
       "id": 1
+    },
+    {
+      "email": "bryan@mail.com",
+      "password": "bryan",
+      "fullname": "Bryan Nilsem",
+      "id": 2
     }
   ],
   "parties": [
     {
-      "img": "",
-      "name": "",
-      "location": "",
-      "date": "",
-      "fullname": "Hello World",
-      "userId": 1,
-      "id": 1
+      "id": 2,
+      "name": "Robby wedding",
+      "location": "1234 St. Nashville Tn. 96525",
+      "date": "2019-06-19",
+      "fullname": "Bryan Nilsem",
+      "userId": 2
     }
   ],
   "favorites": []
