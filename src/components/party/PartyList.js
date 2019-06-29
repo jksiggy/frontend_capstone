@@ -13,18 +13,18 @@ export default class PartyList extends Component {
 
             <React.Fragment>
 
-                <div className="partyButton">
-                    <Button color="info"
-                        type="button"
-                        onClick={() => {
-                            this.props.history.push("/parties/new")
-                        }
-                        }>
-                        New Party
+                    <div className="partyButton">
+                        <Button color="info"
+                            type="button"
+                            onClick={() => {
+                                this.props.history.push("/parties/new")
+                            }
+                            }>
+                            New Party
                 </Button>
-                </div>
+                    </div>
+                                            <div className="partyListItem">
 
-                <section className="parties">
                     {
                         this.props.parties.map((item) => {
                             return <PartyItem key={item.id} party={item}
@@ -34,7 +34,7 @@ export default class PartyList extends Component {
                                 favorites={this.props.favorites} />
                         })
                     }
-                </section>
+                </div>
 
             </React.Fragment>
 

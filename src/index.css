@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(./components/images/partyNight.jpg);
+  
  
  
 }
@@ -33,9 +34,25 @@ margin-top: 5.5cm;
   margin-top: 5.5cm;
 }
 
+.partyListItem {
+  display: flex;
+  flex-wrap: wrap;
+}
 .PartyItem {
-  background-color: rgb(248, 247, 216, 0.7)
-  
+  background-color: rgb(248, 247, 216, 0.7);
+ width: 30vw;
+ margin: 8px;
+ padding:12px;
+}
+
+.container {
+  width: 25%;
+}
+
+.card {
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .FavoriteItem{
   background-color: rgb(248, 247, 216, 0.7)
@@ -44,4 +61,5 @@ margin-top: 5.5cm;
 .partyButton {
   align-items: center
 }
+
 
