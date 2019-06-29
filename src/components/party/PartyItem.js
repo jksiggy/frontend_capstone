@@ -60,16 +60,17 @@ class PartyItem extends Component {
 
         return (
             <Container>
-                 <Col>
+                 <Row>
                  <Col sm="12" md={{ size: 6, offset: 3 }}>
             <Card className="PartyItem">
+               <CardImg width="250px" src={this.props.party.img} alt="Image" />
                <CardBody>
                 <CardTitle>{this.props.party.name}</CardTitle>
                 <CardText>{this.props.party.location}</CardText>
                     <CardText>{this.props.party.date}</CardText>
 
                     <CardText>Created By: {this.props.party.fullname}</CardText>
-                    <br />
+                   
                     </CardBody>
                     {this.state.currentUser == (this.props.party.userId) ? (
                         <>
@@ -105,7 +106,7 @@ class PartyItem extends Component {
                         )}
             </Card>
             </Col>
-            </Col>
+            </Row>
             </Container>
         )
     }

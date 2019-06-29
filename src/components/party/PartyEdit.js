@@ -24,6 +24,7 @@ export default class PartyEdit extends Component {
         let fullname = sessionStorage.getItem('Fullname')
         const editedParty = {
             id: this.props.match.params.partyId,
+            img : this.state.image,
             name: this.state.partyName,
             location: this.state.location,
             date: this.state.date,
@@ -40,6 +41,7 @@ export default class PartyEdit extends Component {
         PartyManager.get(this.props.match.params.partyId)
             .then(party => {
                 this.setState({
+                    image: party.img,
                     partyName: party.name,
                     location: party.location,
                     date: party.date
@@ -53,6 +55,19 @@ export default class PartyEdit extends Component {
             <React.Fragment>
                  <Container className="EditParty">
                 <form className="partyForm">
+
+                <div className="form-group">
+                        <label htmlFor="image">Party Image</label>
+                        <input
+                            type="text"
+                            required
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="image"
+                            value={this.state.image}
+                        />
+                    </div>
+
                     <div className="form-group">
                         <label htmlFor="partyName">Party Name</label>
                         <input

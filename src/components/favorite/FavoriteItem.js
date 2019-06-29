@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container,Card,Col, CardBody, CardTitle, CardText } from 'reactstrap';
+import { Container,Card,Col, CardBody, CardTitle, CardText, CardImg } from 'reactstrap';
 
 
 
@@ -23,6 +23,7 @@ class FavoriteItem extends Component {
             <Col>
             <Col sm="12" md={{ size: 6, offset: 3 }}>
             <Card className="FavoriteItem">
+            <CardImg width="250px" src={this.props.favorite.party.img} alt="Image" />
                <CardBody>
                     <CardTitle>{this.props.favorite.party.name}</CardTitle>
                     <CardText>{this.props.favorite.party.location}</CardText>
