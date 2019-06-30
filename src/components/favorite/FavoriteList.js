@@ -12,7 +12,7 @@ export default class FavoriteList extends Component {
         return (
             <React.Fragment>
 
-                <section className="favorites">
+                <section className="favoritesListItem">
                     {
                          this.props.favorites.filter(favorited => favorited.userId == sessionStorage.getItem("User"))
                         .map((item) => {

@@ -19,10 +19,10 @@ class FavoriteItem extends Component {
 
     render() {
         return (
-            <Container>
-            <Col>
-            <Col sm="12" md={{ size: 6, offset: 3 }}>
-            <Card className="FavoriteItem">
+            <Container className="favoriteContainer">
+            
+          
+            <Card className="favoriteCard">
             <CardImg width="250px" src={this.props.favorite.party.img} alt="Image" />
                <CardBody>
                     <CardTitle>{this.props.favorite.party.name}</CardTitle>
@@ -33,8 +33,7 @@ class FavoriteItem extends Component {
                     <button onClick={this.handleClick} disabled={this.state.saveDisabled} >Delete </button>
                     </CardBody>
             </Card>
-            </Col>
-            </Col>
+          
             </Container>
         )
     }

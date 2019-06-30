@@ -49,13 +49,31 @@ margin-top: 5.5cm;
   width: 25%;
 }
 
+
 .card {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
 }
-.FavoriteItem{
-  background-color: rgb(248, 247, 216, 0.7)
+
+.favoriteCard{
+  background-color: rgb(248, 247, 216, 0.7);
+  width: 30vw;
+  margin: 8px;
+  padding:12px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+ 
+}
+
+.favoriteContainer {
+  width: 25%;
+}
+
+.favoritesListItem {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .partyButton {
