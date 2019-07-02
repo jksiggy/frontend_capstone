@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container,Card,Col, CardBody, CardTitle, CardText, CardImg } from 'reactstrap';
+import { Container,Card,Col, CardBody, CardTitle, CardText, CardImg, Button, ButtonGroup } from 'reactstrap';
 
 
 
@@ -29,8 +29,9 @@ class FavoriteItem extends Component {
                     <CardText>{this.props.favorite.party.location}</CardText>
                     <time>{this.props.favorite.party.date}</time>
                     <CardText>Created By: {this.props.favorite.party.fullname}</CardText>
-
-                    <button onClick={this.handleClick} disabled={this.state.saveDisabled} >Delete </button>
+                    <ButtonGroup>
+                    <Button color="danger" size="sm" onClick={this.handleClick} disabled={this.state.saveDisabled} >REMOVE </Button>
+                    </ButtonGroup>
                     </CardBody>
             </Card>
           

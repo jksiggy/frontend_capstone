@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 
 
+
 class Login extends Component {
 
   state = {
@@ -54,9 +55,7 @@ class Login extends Component {
     return (
       <Container className="App">
         
-
-
-        <h2 className="Welcome">Welcome</h2>
+     
 
         <Form className="form">
           <Col>

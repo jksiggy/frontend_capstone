@@ -1,117 +1,60 @@
 {
   "users": [
     {
-      "email": "hello@world.com",
-      "password": "hello",
-      "fullname": "Hello World",
+      "email": "jr@mail.com",
+      "password": "jr@mail",
+      "fullname": "Jr Sigrah",
       "id": 1
     },
     {
-      "email": "bryan@mail.com",
-      "password": "bryan",
-      "fullname": "Bryan Nilsem",
+      "email": "logan@mail.com",
+      "password": "logan",
+      "fullname": "Logan Palmer",
       "id": 2
-    },
-    {
-      "email": "robby@mail.com",
-      "password": "robby",
-      "fullname": "Robby Hetch",
-      "id": 3
-    },
-    {
-      "email": "shu@mail.com",
-      "password": "shu",
-      "fullname": "Shu Sajid",
-      "id": 4
     }
   ],
   "parties": [
     {
-      "id": 2,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYBbucT_NtW2tnSw38_R6Tikfi5dohL4sy0EXpCIpZGuch-4dPbQ",
-      "name": "Capstone Mileage ",
-      "location": "500 Int. Blvd Nashville Tn 37542",
-      "date": "2019-06-21",
-      "fullname": "Robby Hetch",
-      "userId": 3
+      "id": 1,
+      "img": "https://www.potterybarn.com/pbimgs/rk/images/dp/ecm/201924/1005/031/769.jpg",
+      "name": "Beer Festival ",
+      "location": "312 Indiana Ave.  Nashville Tn 37023",
+      "date": "2019-08-01",
+      "fullname": "Jr Sigrah",
+      "userId": 1
     },
     {
-      "id": 3,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYBbucT_NtW2tnSw38_R6Tikfi5dohL4sy0EXpCIpZGuch-4dPbQ",
-      "name": "Nashville Party",
-      "location": "500 Int. Blvd Nashville Tn 37542",
-      "date": "2019-06-22",
-      "fullname": "Robby Hetch",
-      "userId": 3
-    },
-    {
-      "id": 4,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYBbucT_NtW2tnSw38_R6Tikfi5dohL4sy0EXpCIpZGuch-4dPbQ",
-      "name": "LOL",
-      "location": "500 Int. Blvd Nashville Tn 37542",
-      "date": "2019-06-26",
-      "fullname": "Robby Hetch",
-      "userId": 3
-    },
-    {
-      "id": 5,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHlLiHwMZ4Lbph0tmA4Jtk0BKd_T15PyrA15b1gp_M5dzy1zX-",
-      "name": "Hoo HELL Yeah!!",
-      "location": "500 Int. Blvd Nashville Tn 37542",
-      "date": "2019-07-16",
-      "fullname": "Robby Hetch",
-      "userId": 3
-    },
-    {
-      "id": 6,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYBbucT_NtW2tnSw38_R6Tikfi5dohL4sy0EXpCIpZGuch-4dPbQ",
-      "name": "lol",
-      "location": "500 Int. Blvd Nashville Tn 37542",
-      "date": "2019-06-26",
-      "fullname": "Robby Hetch",
-      "userId": 3
-    },
-    {
-      "id": 7,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHlLiHwMZ4Lbph0tmA4Jtk0BKd_T15PyrA15b1gp_M5dzy1zX-",
-      "name": "500 Int. Blvd Nashville Tn 37542",
-      "location": "500 Int. Blvd Nashville Tn 37542",
+      "id": 20,
+      "img": "http://www.historicbanningmills.com/wp-content/uploads/2018/03/Birthday-Party.jpg",
+      "name": "Robby's Birthday",
+      "location": "325 Tennessee Vally Ct. Nashville Tn 37021 ",
       "date": "2019-07-25",
-      "fullname": "Robby Hetch",
-      "userId": 3
+      "fullname": "Jr Sigrah",
+      "userId": 1
     },
     {
-      "id": 8,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYBbucT_NtW2tnSw38_R6Tikfi5dohL4sy0EXpCIpZGuch-4dPbQ",
-      "name": "NSS Local Treat",
-      "location": "1254 Nahshsh NNNshdnn hdhdf 31425",
-      "date": "2019-06-20",
-      "fullname": "Shu Sajid",
-      "userId": 4
+      "id": 21,
+      "img": "https://www.avparty.com/wp-content/uploads/2016/07/Table-and-Chair-Rentals-For-Backyard-Party-in-Santa-Clarita.jpg",
+      "name": "Logan's Wedding",
+      "location": "711 N.Lane Bexter Tn. 38544",
+      "date": "2019-07-31",
+      "fullname": "Logan Palmer",
+      "userId": 2
     },
     {
-      "img": "",
-      "name": "",
-      "location": "",
-      "date": "",
-      "fullname": "Robby Hetch",
-      "userId": 3,
-      "id": 9
-    },
-    {
-      "img": "",
-      "name": "",
-      "location": "",
-      "date": "",
-      "fullname": "Robby Hetch",
-      "userId": 3,
-      "id": 10
+      "id": 22,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/b/b6/DirtRoadCows.jpg",
+      "name": "Bexter Cook-out",
+      "location": "561 Dirt. Cookville Tn 35914",
+      "date": "2019-08-06",
+      "fullname": "Logan Palmer",
+      "userId": 2
     }
   ],
   "favorites": [
     {
-      "partyId": 8,
-      "userId": 3,
+      "partyId": 20,
+      "userId": 1,
       "id": 1
     }
   ]
