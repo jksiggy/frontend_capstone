@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardTitle, CardBody, CardText, Button,Container,Row, Col, ButtonGroup} from 'reactstrap';
+import { Card, CardTitle, CardBody, CardText, Button, Container, Row, Col, ButtonGroup, CardImg } from 'reactstrap';
 
 
 
@@ -47,7 +47,7 @@ class PartyItem extends Component {
         console.log("newFavoriteArray", newFavoriteArray)
         // let favoriteButton = this.props.favorites.filter(favorited => )
         // console.log("favoriteButton", favoriteButton)
-       
+
         if (newFavoriteArray) {
             this.setState({ isDisabled: true })
         }
@@ -59,38 +59,39 @@ class PartyItem extends Component {
     render() {
 
         return (
-            <Container>
-                 <Col>
-                 <Col sm="12" md={{ size: 6, offset: 3 }}>
-            <Card className="PartyItem">
-               <CardBody>
-                <CardTitle>{this.props.party.name}</CardTitle>
-                <CardText>{this.props.party.location}</CardText>
-                    <CardText>{this.props.party.date}</CardText>
 
-                    <CardText>Created By: {this.props.party.fullname}</CardText>
-                    <br />
+            <Container>
+
+                <Card className="PartyItem">
+                    <CardImg width="50%" src={this.props.party.img} alt="Image" />
+                    <CardBody>
+                        <CardTitle>{this.props.party.name}</CardTitle>
+                        <CardText>{this.props.party.location}</CardText>
+                        <CardText>{this.props.party.date}</CardText>
+
+                        <CardText>Created By: {this.props.party.fullname}</CardText>
                     </CardBody>
+
                     {this.state.currentUser == (this.props.party.userId) ? (
                         <>
-                        <ButtonGroup>
-                            <Button color="danger" size="sm" onClick={this.handleClick} disabled={this.state.saveDisabled} >Delete </Button>
+                            <ButtonGroup>
+                                <Button color="danger" size="sm" onClick={this.handleClick} disabled={this.state.saveDisabled} >Delete </Button>
 
-                            <Button color="info" size="sm"
-                                onClick={() => {
-                                    this.props.history.push(`/parties/${this.props.party.id}/edit`);
-                                }}
-                            >
-                                Edit
+                                <Button color="info" size="sm"
+                                    onClick={() => {
+                                        this.props.history.push(`/parties/${this.props.party.id}/edit`);
+                                    }}
+                                >
+                                    Edit
                              </Button>
 
-                            <Button color="secondary" size="small"
-                                id={this.props.party.id}
-                                onClick={this.buttonSet}
-                                disabled={this.state.isDisabled}>
-                               {this.state.isDisabled ? 'Added' : 'Add Favorite'}
+                                <Button color="secondary" size="small"
+                                    id={this.props.party.id}
+                                    onClick={this.buttonSet}
+                                    disabled={this.state.isDisabled}>
+                                    {this.state.isDisabled ? 'Added' : 'Add Favorite'}
                                 </Button>
-                                </ButtonGroup>
+                            </ButtonGroup>
                         </>
 
                     ) : (
@@ -103,10 +104,10 @@ class PartyItem extends Component {
                             </Button>
 
                         )}
-            </Card>
-            </Col>
-            </Col>
+                </Card>
+
             </Container>
+
         )
     }
 }

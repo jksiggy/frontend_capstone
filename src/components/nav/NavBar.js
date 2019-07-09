@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom";
-import { Nav, NavItem, NavBar, NavLink,Navbar } from 'reactstrap';
+import { Nav, NavItem, NavBar, NavLink, Navbar } from 'reactstrap';
 
 
 class IpartyNav extends Component {
@@ -10,21 +10,31 @@ class IpartyNav extends Component {
         window.location.href = '/';
     }
 
+    
+  
+   
+ 
+
+
+
     render() {
         return (
             <Navbar color="light" light expand="md" na-light blue flex-md-nowrap p-0 shadow>
-               <Nav tabs>
-               <NavItem>
+                <Nav tabs>
+                    <NavItem>
                         <NavLink tag={Link} to="/parties" active>Party</NavLink>
-                        </NavItem>
+                    </NavItem>
                     <NavItem>
-                        <NavLink tag={Link}  to="/favorites" active>Favorite</NavLink>
-                        </NavItem>
+                        <NavLink tag={Link} to="/favorites" active>Favorite</NavLink>
+                    </NavItem>
                     <NavItem>
-                        <NavLink  onClick={this.logout} >Logout</NavLink>
-                        </NavItem>
-               
-            </Nav>
+                        <NavLink onClick={this.logout} >Logout</NavLink>
+                    </NavItem>
+                   
+                   
+
+
+                </Nav>
             </Navbar>
         )
     }

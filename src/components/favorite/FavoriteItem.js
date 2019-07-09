@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container,Card,Col, CardBody, CardTitle, CardText } from 'reactstrap';
+import { Container,Card,Col, CardBody, CardTitle, CardText, CardImg, Button, ButtonGroup } from 'reactstrap';
 
 
 
@@ -19,21 +19,22 @@ class FavoriteItem extends Component {
 
     render() {
         return (
-            <Container>
-            <Col>
-            <Col sm="12" md={{ size: 6, offset: 3 }}>
-            <Card className="FavoriteItem">
+            <Container className="favoriteContainer">
+            
+          
+            <Card className="favoriteCard">
+            <CardImg width="250px" src={this.props.favorite.party.img} alt="Image" />
                <CardBody>
                     <CardTitle>{this.props.favorite.party.name}</CardTitle>
                     <CardText>{this.props.favorite.party.location}</CardText>
                     <time>{this.props.favorite.party.date}</time>
                     <CardText>Created By: {this.props.favorite.party.fullname}</CardText>
-
-                    <button onClick={this.handleClick} disabled={this.state.saveDisabled} >Delete </button>
+                    <ButtonGroup>
+                    <Button color="danger" size="sm" onClick={this.handleClick} disabled={this.state.saveDisabled} >REMOVE </Button>
+                    </ButtonGroup>
                     </CardBody>
             </Card>
-            </Col>
-            </Col>
+          
             </Container>
         )
     }

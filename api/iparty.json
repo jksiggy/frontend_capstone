@@ -1,51 +1,90 @@
 {
   "users": [
     {
-      "email": "robby@mail.com",
-      "password": "robby",
-      "fullname": "Robby Hecht",
+      "email": "jr@mail.com",
+      "password": "jr@mail",
+      "fullname": "Jr Sigrah",
       "id": 1
     },
     {
-      "email": "bryan@mail.com",
-      "password": "bryan",
-      "fullname": "Bryan Nilsen",
+      "email": "logan@mail.com",
+      "password": "logan",
+      "fullname": "Logan Palmer",
       "id": 2
+    },
+    {
+      "email": "johndoe@mail.com",
+      "password": "johndoe",
+      "fullname": "John Doe",
+      "id": 3
     }
   ],
   "parties": [
     {
       "id": 1,
-      "name": "Robby Wedding",
-      "location": "500 Int. South, Nashville Tn 37015",
-      "date": "2019-06-29",
-      "fullname": "Robby Hecht",
+      "img": "https://www.potterybarn.com/pbimgs/rk/images/dp/ecm/201924/1005/031/769.jpg",
+      "name": "Beer Festival ",
+      "location": "312 Indiana Ave.  Nashville Tn 37023",
+      "date": "2019-08-01",
+      "fullname": "Jr Sigrah",
       "userId": 1
     },
     {
-      "id": 2,
-      "name": "Nss Gradutate",
-      "location": "7th St. Nashville TN 35225",
-      "date": "2019-06-30",
-      "fullname": "Bryan Nilsen",
+      "id": 20,
+      "img": "http://www.historicbanningmills.com/wp-content/uploads/2018/03/Birthday-Party.jpg",
+      "name": "Robby's Birthday",
+      "location": "325 Tennessee Vally Ct. Nashville Tn 37021 ",
+      "date": "2019-07-09",
+      "fullname": "Jr Sigrah",
+      "userId": 1
+    },
+    {
+      "id": 21,
+      "img": "https://www.avparty.com/wp-content/uploads/2016/07/Table-and-Chair-Rentals-For-Backyard-Party-in-Santa-Clarita.jpg",
+      "name": "Logan's Wedding",
+      "location": "711 N.Lane Bexter Tn. 38544",
+      "date": "2019-07-31",
+      "fullname": "Logan Palmer",
       "userId": 2
+    },
+    {
+      "id": 22,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/b/b6/DirtRoadCows.jpg",
+      "name": "Bexter Cook-out",
+      "location": "561 Dirt. Cookville Tn 35914",
+      "date": "2019-08-06",
+      "fullname": "Logan Palmer",
+      "userId": 2
+    },
+    {
+      "id": 23,
+      "img": "https://media-api.xogrp.com/images/fde6de0b-31ff-48f5-9a7e-b3ebbec724b1~rs_768.h",
+      "name": "Wee-Man Wedding",
+      "location": "624 Weed Ave. Colorado Spring Cl. 98464",
+      "date": "2019-08-15",
+      "fullname": "John Doe",
+      "userId": 3
+    },
+    {
+      "id": 24,
+      "img": "https://static.vinepair.com/wp-content/uploads/2017/08/askadam-internal-1.jpg",
+      "name": "32 Capstone Party",
+      "location": "500 int Blvd Nashville Tn 37892",
+      "date": "2019-07-10",
+      "fullname": "Jr Sigrah",
+      "userId": 1
     }
   ],
   "favorites": [
     {
-      "partyId": 1,
-      "userId": 2,
+      "partyId": 20,
+      "userId": 3,
       "id": 2
     },
     {
-      "partyId": 2,
-      "userId": 2,
+      "partyId": 22,
+      "userId": 3,
       "id": 3
-    },
-    {
-      "partyId": 2,
-      "userId": 1,
-      "id": 4
     }
   ]
 }
